@@ -23,7 +23,6 @@ def main():
     for warc_file in get_warc_files(DATASET_PATH):
         with open(warc_file, "rb") as stream:
             for record in ArchiveIterator(stream):
-<<<<<<< HEAD
                 content = extract_content(record)
                 article_date = extract_date(record)
 
@@ -36,7 +35,6 @@ def main():
                 article_title = parse_article_title(processed_content)
                 article_text = parse_article_text(processed_content)
 
-=======
                 parser = Parser()
                 parser.extract_content(record)
                 content = extract_content(record)
@@ -51,17 +49,12 @@ def main():
                 article_title = parse_article_title(processed_content)
                 article_text = parse_article_text(processed_content)
                 
->>>>>>> 8ba2ddea1459fcf736965a92aeafeb0abd14ed2e
                 og_data = {
                         "og_title": article_title,
                         "og_text": article_text,
                         "date": article_date,
                         }
-<<<<<<< HEAD
 
-=======
-                
->>>>>>> 8ba2ddea1459fcf736965a92aeafeb0abd14ed2e
                 translated_data = {
                         "translated_title": translate(article_title),
                         "translated_text": translate(article_text),
