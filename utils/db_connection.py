@@ -57,7 +57,7 @@ class Db_Connection():
         if record.rec_type != "response" or record.length <= 0:
             return None
         content = record.content_stream().read()
-        return content.decode("utf-8", errors="ignore")
+        return content.decode("cb2312", errors="ignore")
 
 
     def parse_content(content: str) -> dict:
