@@ -46,7 +46,7 @@ def send_to_gpt(msg, date_start, date_end):
     )
 
     # Создание цепочки из инициализации модели и промпта
-    chain = LLMChain(llm=YandexGPT(temperature=0.03,
+    chain = LLMChain(llm=YandexGPT(temperature=0.3,
                                           model_uri=model_uri,
                                           api_key=api_key,
                                           max_tokens=700),
