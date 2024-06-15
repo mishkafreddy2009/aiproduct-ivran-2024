@@ -2,9 +2,9 @@
 Чат-бот для анализа восточных СМИ
 
 bot.py - telegram bot<br>
-requirements.txt, config.py, utils.py - конфигурационные файлы
-db_connection - подключение к базе данных
-documents.json, faiss - векторизованные данные для цепочки промпта
-main.py - скрипт для работы с wark данными
-parser.py - парсинг данных из wark
-translator.py - скрипт для перевода данных через API
+requirements.txt, config.py, utils.py - конфигурационные файлы<br>
+db_connection - подключение к базе данных<br>
+documents.json, faiss - векторизованные данные для цепочки промпта<br>
+main.py - скрипт для работы с wark данными<br>
+parser.py - парсинг данных из wark<br>
+translator.py - скрипт для перевода данных через API<br>
