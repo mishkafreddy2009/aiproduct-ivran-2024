@@ -11,8 +11,8 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.llms import YandexGPT
 
-model_uri = "gpt://b1g2adn1ie6t84o9hc67/yandexgpt/latest"
-api_key = "AQVN2KFHKB0JGpfcyApwYvGtP8hNRtPjQPosDU0N"
+model_uri = ""
+api_key = ""
 
 def send_to_gpt(msg, date_start, date_end):
     # Сохранение веркторизованного датасета
