@@ -1,5 +1,6 @@
 # aiproduct-nlmk-2024
-Чат-бот для анализа восточных СМИ
+Чат-бот для анализа восточных СМИ<br>
+Для запуска программы, необходимо запустить файл boy.py и нажать /start а боте
 
 bot.py - telegram bot<br>
 requirements.txt, config.py, utils.py - конфигурационные файлы<br>
