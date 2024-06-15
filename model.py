@@ -15,7 +15,9 @@ model_uri = ""
 api_key = ""
 
 def send_to_gpt(msg, date_start, date_end):
-    # Сохранение веркторизованного датасета
+    """Сохранение веркторизованного датасета
+    Пример векторизации на небольшом наборе данных для удобства демонстрации, работа на части датасета лежит на colab"""
+
     # df = pd.read_json("documents.json", orient='records')
     # loader = DataFrameLoader(df, page_content_column='question')
     # documents = loader.load()
@@ -35,7 +37,7 @@ def send_to_gpt(msg, date_start, date_end):
     prompt_template = """Используй правила для ответа
     Переводи имена собственные на китайский,
     В конце обязательно добавь ссылку на полный документ
-    {date} должна быть меньше """+date_start+""" и меньше"""+date_end+"""
+    {date} должна быть больше """+date_start+""" и меньше"""+date_end+"""
     {answer}
     link: {link}
     """
@@ -46,7 +48,7 @@ def send_to_gpt(msg, date_start, date_end):
     )
 
     # Создание цепочки из инициализации модели и промпта
-    chain = LLMChain(llm=YandexGPT(temperature=0.03,
+    chain = LLMChain(llm=YandexGPT(temperature=0.3,
                                           model_uri=model_uri,
                                           api_key=api_key,
                                           max_tokens=700),
